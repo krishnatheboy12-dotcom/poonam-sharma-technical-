@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TECHNOVA 2026 — Electronics Club Technical Festival</title>
+  <meta name="description" content="Official event platform for TECHNOVA 2026 organised by the Electronics Club. Explore technical competitions, view rules, register individually or in teams, track registrations, and manage festival entries." />
+  <meta property="og:title" content="TECHNOVA 2026 — Electronics Club Technical Festival" />
+  <meta property="og:description" content="Where engineering meets imagination. Explore technical events, review competition rules, and register for TECHNOVA 2026." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Primary Header: Strict 3-zone editorial bar -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#hero" class="brand-wordmark">TECHNOVA 2026</a>
+
+      <nav class="primary-nav" aria-label="Primary Navigation">
+        <a href="#hero" class="nav-link" data-nav-link>Home</a>
+        <a href="#events" class="nav-link" data-nav-link>Events</a>
+        <a href="#schedule" class="nav-link" data-nav-link>Schedule</a>
+        <a href="#my-registrations" class="nav-link" data-nav-link>My Registrations</a>
+        <a href="#faq" class="nav-link" data-nav-link>FAQ</a>
+        <a href="#contact" class="nav-link" data-nav-link>Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#register" class="btn btn-primary btn-sm header-cta" data-scroll-register>REGISTER NOW</a>
+        <button
+          type="button"
+          class="mobile-menu-toggle"
+          id="mobile-menu-toggle"
+          aria-expanded="false"
+          aria-controls="mobile-nav-drawer"
+          aria-label="Open navigation menu"
+        >
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer" hidden>
+      <nav class="mobile-nav-list" aria-label="Mobile Navigation">
+        <a href="#hero" class="mobile-nav-link" data-mobile-link>Home</a>
+        <a href="#events" class="mobile-nav-link" data-mobile-link>Events</a>
+        <a href="#schedule" class="mobile-nav-link" data-mobile-link>Schedule</a>
+        <a href="#my-registrations" class="mobile-nav-link" data-mobile-link>My Registrations</a>
+        <a href="#faq" class="mobile-nav-link" data-mobile-link>FAQ</a>
+        <a href="#contact" class="mobile-nav-link" data-mobile-link>Contact</a>
+        <a href="#organiser" class="mobile-nav-link" data-mobile-link>Organiser Dashboard</a>
+        <a href="#register" class="btn btn-primary mobile-nav-cta" data-mobile-link data-scroll-register>REGISTER NOW</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- 01. HERO SECTION -->
+    <section class="hero-section" id="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="hero-kicker mono-label">ELECTRONICS CLUB PRESENTS</p>
+          <h1 class="hero-title" id="hero-title">TECHNOVA 2026</h1>
+          <p class="hero-tagline">Build Beyond Boundaries.</p>
+          <p class="hero-description">
+            Where engineering meets imagination. Explore technology, challenge your thinking and compete with the brightest minds.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#events" class="btn btn-secondary">EXPLORE EVENTS</a>
+            <a href="#register" class="btn btn-primary" data-scroll-register>REGISTER NOW</a>
+          </div>
+        </div>
+
+        <!-- Custom Editorial Technical Schematic (Inline SVG) -->
+        <div class="hero-visual" aria-hidden="true">
+          <figure class="schematic-frame">
+            <svg viewBox="0 0 560 440" class="schematic-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Technical PCB and signal routing schematic">
+              <defs>
+                <pattern id="tech-grid" width="28" height="28" patternUnits="userSpaceOnUse">
+                  <path d="M 28 0 L 0 0 0 28" fill="none" stroke="rgba(23,25,24,0.08)" stroke-width="0.75" />
+                </pattern>
+              </defs>
+              <rect width="560" height="440" fill="url(#tech-grid)" />
+
+              <!-- Outer architectural frame & corner calibration marks -->
+              <rect x="20" y="20" width="520" height="400" fill="none" stroke="#171918" stroke-width="1" stroke-opacity="0.28" />
+              <path d="M20 44 L20 20 L44 20 M516 20 L540 20 L540 44 M20 396 L20 420 L44 420 M516 420 L540 420 L540 396" fill="none" stroke="#F15A24" stroke-width="1.5" />
+
+              <!-- Axis labels & registration ticks -->
+              <text x="34" y="42" font-family="monospace" font-size="10" fill="#5E605B" letter-spacing="1.2">SCHEMATIC REF · TN-26-REV.A</text>
+              <text x="415" y="42" font-family="monospace" font-size="10" fill="#5E605B" letter-spacing="1.2">5V / LOGIC CORE</text>
+
+              <!-- PCB Bus Traces -->
+              <g fill="none" stroke="#171918" stroke-width="1.25" stroke-opacity="0.75">
+                <path d="M72 130 H148 L172 154 H222" />
+                <path d="M72 156 H136 L160 180 H222" />
+                <path d="M72 182 H124 L148 206 H222" />
+                <path d="M72 208 H114 L138 232 H222" />
+                <path d="M338 154 H396 L422 128 H488" />
+                <path d="M338 180 H412 L438 154 H488" />
+                <path d="M338 206 H420 L446 180 H488" />
+                <path d="M338 232 H404 L430 258 H488" />
+              </g>
+
+              <!-- Signal Orange High-Speed Differential Pair -->
+              <g fill="none" stroke="#F15A24" stroke-width="1.75">
+                <path d="M280 80 V128" />
+                <path d="M280 264 V316 L306 342 H446" />
+                <circle cx="280" cy="80" r="4" fill="#F4F2EC" stroke="#F15A24" stroke-width="1.75" />
+                <circle cx="446" cy="342" r="4" fill="#F15A24" />
+              </g>
+
+              <!-- Central Microcontroller IC Package -->
+              <g transform="translate(222, 128)">
+                <rect x="0" y="0" width="116" height="136" fill="#FFFFFF" stroke="#171918" stroke-width="1.5" />
+                <rect x="8" y="8" width="100" height="120" fill="none" stroke="#171918" stroke-width="0.75" stroke-opacity="0.35" />
+                <circle cx="20" cy="20" r="3.5" fill="#F15A24" />
+                <text x="58" y="58" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="13" fill="#171918" letter-spacing="1.5">TN-2026</text>
+                <text x="58" y="76" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#5E605B">ARM-M7 / 480MHz</text>
+                <line x1="22" y1="92" x2="94" y2="92" stroke="#171918" stroke-opacity="0.2" stroke-width="1" />
+                <text x="58" y="109" text-anchor="middle" font-family="monospace" font-size="9" fill="#5E605B">04 CHANNELS</text>
+
+                <!-- IC Pins Left & Right -->
+                <g fill="#171918">
+                  <rect x="-8" y="23" width="8" height="4" />
+                  <rect x="-8" y="49" width="8" height="4" />
+                  <rect x="-8" y="75" width="8" height="4" />
+                  <rect x="-8" y="101" width="8" height="4" />
+                  <rect x="116" y="23" width="8" height="4" />
+                  <rect x="116" y="49" width="8" height="4" />
+                  <rect x="116" y="75" width="8" height="4" />
+                  <rect x="116" y="101" width="8" height="4" />
+                </g>
+              </g>
+
+              <!-- Passive Components & Via Nodes -->
+              <g fill="#F4F2EC" stroke="#171918" stroke-width="1.25">
+                <circle cx="72" cy="130" r="4" />
+                <circle cx="72" cy="156" r="4" />
+                <circle cx="72" cy="182" r="4" />
+                <circle cx="72" cy="208" r="4" />
+                <circle cx="488" cy="128" r="4" />
+                <circle cx="488" cy="154" r="4" />
+                <circle cx="488" cy="180" r="4" />
+                <circle cx="488" cy="258" r="4" />
+              </g>
+
+              <!-- Resistor Symbol on Bottom Left -->
+              <g transform="translate(52, 330)">
+                <rect x="0" y="0" width="164" height="64" fill="#FFFFFF" stroke="#171918" stroke-width="1" stroke-opacity="0.25" />
+                <path d="M16 34 H36 L42 22 L52 46 L62 22 L72 46 L82 22 L92 46 L98 34 H146" fill="none" stroke="#171918" stroke-width="1.35" />
+                <text x="16" y="18" font-family="monospace" font-size="9" fill="#5E605B">OSC / SIGNAL CAPTURE</text>
+              </g>
+
+              <!-- Digital Waveform Square Pulse -->
+              <g transform="translate(242, 360)">
+                <path d="M0 24 H24 V6 H54 V24 H84 V6 H114 V24 H144 V6 H174 V24 H204" fill="none" stroke="#171918" stroke-width="1.35" stroke-opacity="0.85" />
+                <path d="M54 6 H84" fill="none" stroke="#F15A24" stroke-width="2" />
+              </g>
+            </svg>
+            <figcaption class="schematic-caption mono-label">
+              FIG. 01 — FESTIVAL SYSTEM ARCHITECTURE · ELECTRONICS CLUB
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Full-width Operational Meta + Live Countdown Strip below Hero split -->
+      <div class="container">
+        <div class="hero-telemetry-strip">
+          <div class="meta-bar" aria-label="Event Overview">
+          <div class="meta-item">
+            <span class="meta-label">EVENT DATE</span>
+            <span class="meta-value" id="hero-event-date">Configuring...</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">VENUE</span>
+            <span class="meta-value" id="hero-venue">Configuring...</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">REGISTRATION STATUS</span>
+            <span class="meta-value meta-status" id="hero-reg-status">Configuring...</span>
+          </div>
+        </div>
+
+        <div class="countdown-panel" aria-live="polite" aria-label="Event Countdown">
+          <span class="countdown-heading mono-label">COUNTDOWN TO OPENING</span>
+          <div class="countdown-grid" id="countdown-grid">
+            <div class="countdown-unit">
+              <span class="countdown-digits" id="cd-days">00</span>
+              <span class="countdown-label">DAYS</span>
+            </div>
+            <span class="countdown-sep" aria-hidden="true">:</span>
+            <div class="countdown-unit">
+              <span class="countdown-digits" id="cd-hours">00</span>
+              <span class="countdown-label">HOURS</span>
+            </div>
+            <span class="countdown-sep" aria-hidden="true">:</span>
+            <div class="countdown-unit">
+              <span class="countdown-digits" id="cd-minutes">00</span>
+              <span class="countdown-label">MINUTES</span>
+            </div>
+            <span class="countdown-sep" aria-hidden="true">:</span>
+            <div class="countdown-unit">
+              <span class="countdown-digits" id="cd-seconds">00</span>
+              <span class="countdown-label">SECONDS</span>
+            </div>
+          </div>
+          <p class="countdown-tba" id="countdown-tba" hidden>DATE TO BE ANNOUNCED</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02. EVENTS SECTION -->
+    <section class="section events-section" id="events" aria-labelledby="events-heading">
+      <div class="container">
+        <div class="section-header-split reveal">
+          <div>
+            <p class="section-kicker mono-label">01. COMPETITIONS</p>
+            <h2 class="section-title" id="events-heading">THE COMPETITIONS</h2>
+          </div>
+          <p class="section-subtitle">
+            Four challenges. Different disciplines. One platform to prove your potential.
+          </p>
+        </div>
+
+        <div class="events-grid" id="events-grid">
+          <!-- Dynamically populated from EVENTS_DATA in script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 03. MULTI-STEP REGISTRATION SECTION -->
+    <section class="section register-section" id="register" aria-labelledby="register-heading">
+      <div class="container">
+        <div class="section-header-split reveal">
+          <div>
+            <p class="section-kicker mono-label">02. PARTICIPANT ENTRY</p>
+            <h2 class="section-title" id="register-heading">EVENT REGISTRATION</h2>
+          </div>
+          <p class="section-subtitle">
+            Register individually or as a team. One unique registration ID is issued per event entry.
+          </p>
+        </div>
+
+        <div class="register-shell">
+          <!-- Stepper Navigation Indicator -->
+          <ol class="stepper" id="registration-stepper" aria-label="Registration Steps">
+            <li class="stepper-item is-active" data-step-indicator="1">
+              <span class="stepper-num">01</span>
+              <span class="stepper-text">Personal Details</span>
+            </li>
+            <li class="stepper-item" data-step-indicator="2">
+              <span class="stepper-num">02</span>
+              <span class="stepper-text">Event Selection</span>
+            </li>
+            <li class="stepper-item" data-step-indicator="3">
+              <span class="stepper-num">03</span>
+              <span class="stepper-text" id="stepper-team-label">Team Details</span>
+            </li>
+            <li class="stepper-item" data-step-indicator="4">
+              <span class="stepper-num">04</span>
+              <span class="stepper-text">Review &amp; Submit</span>
+            </li>
+          </ol>
+
+          <!-- Registration Form -->
+          <form class="registration-form" id="registration-form" novalidate>
+            <!-- Global Form Alert Banner -->
+            <div class="form-alert" id="form-global-error" role="alert" hidden></div>
+
+            <!-- STEP 1: PERSONAL DETAILS -->
+            <fieldset class="form-step is-active" id="step-1" data-step="1">
+              <legend class="step-legend">Step 1 — Personal Details</legend>
+              <div class="form-grid">
+                <div class="field-group">
+                  <label for="reg-full-name" class="field-label">Full Name <span class="req">*</span></label>
+                  <input type="text" id="reg-full-name" name="fullName" class="field-input" autocomplete="name" placeholder="e.g. Aarav Mehta" required />
+                  <p class="field-error" id="err-full-name" aria-live="polite"></p>
+                </div>
+
+                <div class="field-group">
+                  <label for="reg-email" class="field-label">College Email Address <span class="req">*</span></label>
+                  <input type="email" id="reg-email" name="email" class="field-input" autocomplete="email" placeholder="e.g. aarav.mehta@college.edu" required />
+                  <p class="field-error" id="err-email" aria-live="polite"></p>
+                </div>
+
+                <div class="field-group">
+                  <label for="reg-phone" class="field-label">Contact Number <span class="req">*</span></label>
+                  <input type="tel" id="reg-phone" name="phone" class="field-input" inputmode="numeric" maxlength="14" placeholder="10-digit Indian mobile (e.g. 9876543210)" required />
+                  <p class="field-hint">Must be a valid 10-digit Indian mobile number starting with 6–9.</p>
+                  <p class="field-error" id="err-phone" aria-live="polite"></p>
+                </div>
+
+                <div class="field-group">
+                  <label for="reg-department" class="field-label">Department <span class="req">*</span></label>
+                  <input type="text" id="reg-department" name="department" class="field-input" placeholder="e.g. Electronics &amp; Communication" required />
+                  <p class="field-error" id="err-department" aria-live="polite"></p>
+                </div>
+
+                <div class="field-group field-full">
+                  <label for="reg-year" class="field-label">Academic Year <span class="req">*</span></label>
+                  <select id="reg-year" name="academicYear" class="field-select" required>
+                    <option value="">Select Academic Year</option>
+                    <option value="First Year">First Year</option>
+                    <option value="Second Year">Second Year</option>
+                    <option value="Third Year">Third Year</option>
+                    <option value="Fourth Year">Fourth Year</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <p class="field-error" id="err-year" aria-live="polite"></p>
+                </div>
+              </div>
+
+              <div class="step-actions step-actions-end">
+                <button type="button" class="btn btn-primary" id="btn-step1-next">Continue to Event Selection</button>
+              </div>
+            </fieldset>
+
+            <!-- STEP 2: EVENT SELECTION -->
+            <fieldset class="form-step" id="step-2" data-step="2" hidden>
+              <legend class="step-legend">Step 2 — Event Selection</legend>
+              <div class="form-grid">
+                <div class="field-group field-full">
+                  <label for="reg-event" class="field-label">Select Event <span class="req">*</span></label>
+                  <select id="reg-event" name="eventId" class="field-select" required>
+                    <option value="">Choose a competition</option>
+                    <!-- Populated dynamically from EVENTS_DATA -->
+                  </select>
+                  <p class="field-error" id="err-event" aria-live="polite"></p>
+                </div>
+
+                <div class="field-group">
+                  <label for="reg-participation-type" class="field-label">Participation Type (Auto-assigned)</label>
+                  <input type="text" id="reg-participation-type" class="field-input field-readonly" readonly aria-readonly="true" value="Select an event first" />
+                  <p class="field-hint">Automatically locked to the selected event's format.</p>
+                </div>
+
+                <div class="field-group">
+                  <label for="reg-event-deadline" class="field-label">Registration Deadline &amp; Limit</label>
+                  <input type="text" id="reg-event-deadline" class="field-input field-readonly" readonly aria-readonly="true" value="—" />
+                </div>
+              </div>
+
+              <div class="selected-event-brief" id="selected-event-brief" hidden></div>
+
+              <div class="step-actions">
+                <button type="button" class="btn btn-secondary" id="btn-step2-prev">Back</button>
+                <button type="button" class="btn btn-primary" id="btn-step2-next">Continue</button>
+              </div>
+            </fieldset>
+
+            <!-- STEP 3: TEAM DETAILS -->
+            <fieldset class="form-step" id="step-3" data-step="3" hidden>
+              <legend class="step-legend">Step 3 — Team Details</legend>
+
+              <div id="individual-skip-note" class="info-notice" hidden>
+                This is an individual competition (maximum 1 participant). No team details are required.
+              </div>
+
+              <div id="team-fields-wrapper">
+                <div class="form-grid">
+                  <div class="field-group">
+                    <label for="reg-team-name" class="field-label">Team Name <span class="req">*</span></label>
+                    <input type="text" id="reg-team-name" name="teamName" class="field-input" placeholder="e.g. Mechatronics Vanguard" />
+                    <p class="field-error" id="err-team-name" aria-live="polite"></p>
+                  </div>
+
+                  <div class="field-group">
+                    <label for="reg-team-leader" class="field-label">Team Leader (Counted in team size)</label>
+                    <input type="text" id="reg-team-leader" class="field-input field-readonly" readonly aria-readonly="true" />
+                    <p class="field-hint">Leader is automatically included in the maximum team limit.</p>
+                  </div>
+                </div>
+
+                <div class="team-members-header">
+                  <div>
+                    <h3 class="subsection-title">Additional Team Members</h3>
+                    <p class="field-hint" id="team-size-counter">Team Size: 1 / 4 (including leader)</p>
+                  </div>
+                  <button type="button" class="btn btn-secondary btn-sm" id="btn-add-member">Add Team Member</button>
+                </div>
+
+                <p class="field-error" id="err-team-members" aria-live="polite"></p>
+
+                <div class="team-members-list" id="team-members-list">
+                  <!-- Dynamic member rows rendered by script.js -->
+                </div>
+              </div>
+
+              <div class="step-actions">
+                <button type="button" class="btn btn-secondary" id="btn-step3-prev">Back</button>
+                <button type="button" class="btn btn-primary" id="btn-step3-next">Review Registration</button>
+              </div>
+            </fieldset>
+
+            <!-- STEP 4: REVIEW AND SUBMIT -->
+            <fieldset class="form-step" id="step-4" data-step="4" hidden>
+              <legend class="step-legend">Step 4 — Review and Submit</legend>
+
+              <div class="review-grid" id="review-summary-content">
+                <!-- Populated dynamically prior to submission -->
+              </div>
+
+              <div class="declaration-box">
+                <label class="checkbox-label" for="reg-declaration">
+                  <input type="checkbox" id="reg-declaration" name="declaration" />
+                  <span>I confirm that all entered details are accurate and that I have reviewed the official rules and regulations for the selected competition.</span>
+                </label>
+                <p class="field-error" id="err-declaration" aria-live="polite"></p>
+              </div>
+
+              <div class="step-actions">
+                <button type="button" class="btn btn-secondary" id="btn-step4-prev">Back</button>
+                <button type="submit" class="btn btn-primary" id="btn-submit-registration">Submit Registration</button>
+              </div>
+            </fieldset>
+          </form>
+
+          <!-- REGISTRATION SUCCESS SCREEN -->
+          <div class="success-screen" id="registration-success-screen" hidden aria-live="polite">
+            <div class="success-header">
+              <p class="mono-label success-kicker">ENTRY RECORDED</p>
+              <h3 class="success-title">REGISTRATION SUCCESSFUL!</h3>
+              <p class="success-subtitle">Save your unique registration ID below to look up your entry anytime.</p>
+            </div>
+
+            <div class="success-id-bar">
+              <div>
+                <span class="meta-label">UNIQUE REGISTRATION ID</span>
+                <p class="success-reg-id" id="success-reg-id">TN26-ROBO-00001</p>
+              </div>
+              <button type="button" class="btn btn-secondary btn-sm" id="btn-copy-reg-id">Copy ID</button>
+            </div>
+
+            <dl class="success-details-grid" id="success-details-grid">
+              <!-- Populated dynamically upon completion -->
+            </dl>
+
+            <div class="success-actions">
+              <button type="button" class="btn btn-primary" id="btn-view-my-reg">VIEW MY REGISTRATION</button>
+              <button type="button" class="btn btn-secondary" id="btn-register-another">REGISTER FOR ANOTHER EVENT</button>
+              <a href="#hero" class="btn btn-ghost">BACK TO HOME</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04. MY REGISTRATIONS SECTION -->
+    <section class="section my-reg-section" id="my-registrations" aria-labelledby="my-reg-heading">
+      <div class="container">
+        <div class="section-header-split reveal">
+          <div>
+            <p class="section-kicker mono-label">03. PARTICIPANT LOOKUP</p>
+            <h2 class="section-title" id="my-reg-heading">MY REGISTRATIONS</h2>
+          </div>
+          <p class="section-subtitle">
+            Retrieve your confirmed entries using your college email address or unique registration ID.
+          </p>
+        </div>
+
+        <div class="lookup-panel">
+          <div class="lookup-tabs" role="tablist" aria-label="Lookup Method">
+            <button
+              type="button"
+              role="tab"
+              aria-selected="true"
+              class="lookup-tab is-active"
+              id="tab-lookup-email"
+              data-lookup-mode="email"
+            >
+              Option 1: College Email Address
+            </button>
+            <button
+              type="button"
+              role="tab"
+              aria-selected="false"
+              class="lookup-tab"
+              id="tab-lookup-id"
+              data-lookup-mode="id"
+            >
+              Option 2: Unique Registration ID
+            </button>
+          </div>
+
+          <form class="lookup-form" id="lookup-form" novalidate>
+            <div class="lookup-input-wrap">
+              <label for="lookup-query-input" class="field-label" id="lookup-query-label">College Email Address</label>
+              <input
+                type="text"
+                id="lookup-query-input"
+                class="field-input"
+                placeholder="Enter your registered college email (e.g. aarav.mehta@college.edu)"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary lookup-submit">Find Registration</button>
+          </form>
+          <p class="field-error" id="err-lookup" aria-live="polite"></p>
+        </div>
+
+        <div class="lookup-results" id="lookup-results" aria-live="polite">
+          <div class="empty-state-box">
+            <p class="empty-state-title">No lookup performed yet</p>
+            <p class="empty-state-desc">Enter your college email address or unique registration ID above to view only your matching registration records.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05. EVENT SCHEDULE SECTION -->
+    <section class="section schedule-section" id="schedule" aria-labelledby="schedule-heading">
+      <div class="container">
+        <div class="section-header-split reveal">
+          <div>
+            <p class="section-kicker mono-label">04. FESTIVAL TIMELINE</p>
+            <h2 class="section-title" id="schedule-heading">THE DAY AT A GLANCE</h2>
+          </div>
+          <p class="section-subtitle">
+            Provisional festival itinerary. Schedule slots and campus locations are configurable by the organisers.
+          </p>
+        </div>
+
+        <ol class="schedule-timeline" id="schedule-timeline">
+          <!-- Populated dynamically from SCHEDULE_DATA in script.js -->
+        </ol>
+      </div>
+    </section>
+
+    <!-- 06. FAQ SECTION -->
+    <section class="section faq-section" id="faq" aria-labelledby="faq-heading">
+      <div class="container faq-layout">
+        <div class="faq-intro reveal">
+          <p class="section-kicker mono-label">05. INFORMATION</p>
+          <h2 class="section-title" id="faq-heading">FREQUENTLY ASKED QUESTIONS</h2>
+          <p class="section-subtitle">
+            Clear guidelines on eligibility, team structure, ID retrieval, and event participation.
+          </p>
+        </div>
+
+        <div class="faq-accordion" id="faq-accordion">
+          <!-- Populated dynamically from FAQ_DATA in script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 07. ORGANISER DASHBOARD SECTION -->
+    <section class="section organiser-section" id="organiser" aria-labelledby="organiser-heading">
+      <div class="container">
+        <div class="section-header-split reveal">
+          <div>
+            <p class="section-kicker mono-label">06. ADMINISTRATION</p>
+            <h2 class="section-title" id="organiser-heading">ORGANISER DASHBOARD</h2>
+          </div>
+          <p class="section-subtitle">
+            Monitor browser-local registration counts, inspect participant entries, filter records, and export CSV reports.
+          </p>
+        </div>
+
+        <!-- Honest Architecture & Security Notice -->
+        <div class="demo-architecture-notice" role="note">
+          <strong>Frontend Demonstration Notice:</strong>
+          Registrations are stored in your current browser's <code>localStorage</code> and are not shared across different students or devices. This client-side view does not enforce authentication—a live public deployment requires a backend server, database, and verified organiser authentication.
+        </div>
+
+        <!-- Summary Statistics -->
+        <div class="stats-grid" id="organiser-stats-grid" aria-label="Registration Statistics">
+          <div class="stat-cell stat-cell-total">
+            <span class="stat-label">Total Registrations</span>
+            <span class="stat-value" id="stat-total">0</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-label">Robo Wars</span>
+            <span class="stat-value" id="stat-robo">0</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-label">Code Clash</span>
+            <span class="stat-value" id="stat-code">0</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-label">Circuitrix</span>
+            <span class="stat-value" id="stat-circuitrix">0</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-label">Tech Quiz</span>
+            <span class="stat-value" id="stat-quiz">0</span>
+          </div>
+        </div>
+
+        <!-- Controls Toolbar -->
+        <div class="dashboard-toolbar">
+          <div class="toolbar-filters">
+            <div class="toolbar-field toolbar-search">
+              <label for="org-search" class="sr-only">Search registrations by name, email, or ID</label>
+              <input
+                type="search"
+                id="org-search"
+                class="field-input"
+                placeholder="Search by student name, email, or registration ID..."
+              />
+            </div>
+
+            <div class="toolbar-field">
+              <label for="org-filter-event" class="sr-only">Filter by event</label>
+              <select id="org-filter-event" class="field-select">
+                <option value="all">All Events</option>
+                <!-- Populated dynamically -->
+              </select>
+            </div>
+
+            <div class="toolbar-field">
+              <label for="org-filter-type" class="sr-only">Filter by participation type</label>
+              <select id="org-filter-type" class="field-select">
+                <option value="all">All Types</option>
+                <option value="Team">Team</option>
+                <option value="Individual">Individual</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="toolbar-actions">
+            <span class="toolbar-count mono-label" id="org-visible-count">Showing 0 of 0</span>
+            <button type="button" class="btn btn-secondary btn-sm" id="btn-org-refresh">Refresh</button>
+            <button type="button" class="btn btn-primary btn-sm" id="btn-org-export">Export CSV</button>
+          </div>
+        </div>
+
+        <p class="toolbar-feedback mono-label" id="org-feedback" aria-live="polite"></p>
+
+        <!-- Responsive Table Container -->
+        <div class="table-wrapper" id="org-table-wrapper">
+          <table class="data-table" id="org-table">
+            <thead>
+              <tr>
+                <th scope="col">Registration ID</th>
+                <th scope="col">Student Name</th>
+                <th scope="col">College Email</th>
+                <th scope="col">Contact Number</th>
+                <th scope="col">Department</th>
+                <th scope="col">Academic Year</th>
+                <th scope="col">Event</th>
+                <th scope="col">Participation Type</th>
+                <th scope="col">Team Name</th>
+                <th scope="col">Registration Date</th>
+              </tr>
+            </thead>
+            <tbody id="org-table-body">
+              <!-- Rendered dynamically -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-state-box" id="org-empty-state" hidden>
+          <p class="empty-state-title" id="org-empty-title">No registrations recorded yet</p>
+          <p class="empty-state-desc" id="org-empty-desc">
+            Registrations submitted on this browser will appear here immediately. You can submit a new registration above or load sample demonstration records.
+          </p>
+          <div class="empty-state-actions">
+            <a href="#register" class="btn btn-primary btn-sm" data-scroll-register>Register Participant</a>
+            <button type="button" class="btn btn-secondary btn-sm" id="btn-load-sample">Load Sample Demo Records</button>
+          </div>
+        </div>
+
+        <div class="organiser-footer-controls">
+          <button type="button" class="btn btn-ghost btn-sm" id="btn-seed-more">Load Sample Demo Records</button>
+          <button type="button" class="btn btn-ghost btn-sm" id="btn-clear-storage">Clear Browser Records</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08. CONTACT SECTION -->
+    <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="container contact-grid">
+        <div class="contact-lead reveal">
+          <p class="section-kicker mono-label">07. INQUIRIES</p>
+          <h2 class="section-title" id="contact-heading">LET'S CONNECT</h2>
+          <p class="contact-org">Organised by: <strong>Electronics Club</strong></p>
+          <p class="section-subtitle">
+            For competition rule clarifications, equipment queries, or campus logistics, reach out to the organising committee.
+          </p>
+          <div class="contact-cta-row">
+            <a href="#" class="btn btn-primary" id="contact-email-btn">Email Organising Committee</a>
+          </div>
+        </div>
+
+        <dl class="contact-details-list" id="contact-details-list">
+          <!-- Populated dynamically from SITE_CONFIG.contact -->
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand-block">
+        <p class="footer-brand">TECHNOVA 2026</p>
+        <p class="footer-tagline">"Built for the curious. Designed for the future."</p>
+        <p class="footer-org mono-label">Organised by Electronics Club</p>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading mono-label">Quick Navigation</h3>
+        <ul class="footer-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#register">Register</a></li>
+          <li><a href="#my-registrations">My Registrations</a></li>
+          <li><a href="#organiser">Organiser Dashboard</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading mono-label">Contact</h3>
+        <ul class="footer-links" id="footer-contact-list">
+          <!-- Populated dynamically -->
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading mono-label">Social Channels</h3>
+        <ul class="footer-links" id="footer-social-list">
+          <!-- Populated dynamically -->
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p class="footer-copy" id="footer-copyright">© 2026 TECHNOVA · Electronics Club. All rights reserved.</p>
+      <p class="footer-note mono-label">HTML5 · CSS · JAVASCRIPT</p>
+    </div>
+  </footer>
+
+  <!-- EVENT DETAILS MODAL -->
+  <div class="modal-backdrop" id="event-modal" role="dialog" aria-modal="true" aria-labelledby="modal-event-title" hidden>
+    <div class="modal-panel" tabindex="-1">
+      <div class="modal-header">
+        <span class="mono-label modal-index" id="modal-event-code">EVENT 01</span>
+        <button type="button" class="modal-close" id="modal-close-btn" aria-label="Close event details">Close ✕</button>
+      </div>
+
+      <div class="modal-body" id="modal-body-content">
+        <div class="modal-media">
+          <img id="modal-event-img" src="" alt="" referrerpolicy="no-referrer" />
+        </div>
+
+        <div class="modal-info">
+          <h2 class="modal-title" id="modal-event-title">Event Title</h2>
+          <p class="modal-meta mono-label" id="modal-event-meta"></p>
+          <p class="modal-description" id="modal-event-description"></p>
+
+          <dl class="modal-specs">
+            <div class="spec-row">
+              <dt>Participation</dt>
+              <dd id="modal-participation"></dd>
+            </div>
+            <div class="spec-row">
+              <dt>Maximum Team Size</dt>
+              <dd id="modal-team-size"></dd>
+            </div>
+            <div class="spec-row">
+              <dt>Registration Deadline</dt>
+              <dd id="modal-deadline"></dd>
+            </div>
+          </dl>
+
+          <h3 class="modal-rules-heading">Rules and Regulations</h3>
+          <ul class="modal-rules-list" id="modal-rules-list"></ul>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="modal-secondary-close">Back to Events</button>
+        <button type="button" class="btn btn-primary" id="modal-register-btn">Register for Event</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./script.js"></script>
+</body>
+</html>

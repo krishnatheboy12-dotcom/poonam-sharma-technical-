@@ -1,0 +1,8 @@
+{
+  "name": "Remix TECHNOVA 2026 — Electronics Club Technical Festival",
+  "description": "Official event platform for TECHNOVA 2026 organised by the Electronics Club. Explore technical competitions, view rules, register individually or in teams, track registrations, and manage festival entries.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
